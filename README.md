@@ -1,5 +1,9 @@
 # Pulley
 
+Pull down the list of to-read books from GoodReads and track price drops in Amazon.
+
+Experiment for digging into Angular LTS, CSS Grids, etc.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.3.
 
 ## Development server
