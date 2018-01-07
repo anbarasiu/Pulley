@@ -1,0 +1,14 @@
+ul.books {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    border: solid 1px black;
+    border-radius: 4px;
+}
+ul.books li {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    font-weight: bold;
+    padding: 4px;
+}

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Book } from '../book';
 
 @Component({
@@ -8,16 +8,8 @@ import { Book } from '../book';
 })
 export class BookListComponent implements OnInit {
 
-  book: Book = {
-    id: 1,
-    title: 'Bio of An',
-    description: 'Life history of An',
-    isbn: 'adsjfsdk342',
-    author: 'Anbarasi U',
-    rating: 5,
-    dateAdded: new Date('1/1/2018')
-  };
-
+  @Input() books: Book[];
+  
   constructor() { 
     
   }
