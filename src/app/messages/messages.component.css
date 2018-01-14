@@ -1,0 +1,19 @@
+.messages {
+    position: absolute;
+    color: white;
+    background: black;
+    padding: 12px;
+    margin: 8px;
+    bottom: 0;
+    right: 0;
+    font-size: 18px;
+}
+
+.message {
+    transition: opacity 0.5s;
+    opacity: 0;
+}
+
+.message.show {
+    opacity: 1;
+}
