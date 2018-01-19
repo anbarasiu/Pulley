@@ -8,7 +8,7 @@ ul.books {
 ul.books li {
     list-style: none;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 3fr 1fr 1fr 1fr;
     font-weight: bold;
     padding: 4px;
 }

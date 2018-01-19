@@ -1,7 +1,7 @@
-<li *ngFor="let book of books">
-  <div>{{book.title}}</div>
-  <div>{{book.description}}</div>
-  <div>{{book.author}}</div>
-  <div>{{book.rating}}</div>
-  <div>{{book.dateAdded}}</div>
+<li *ngFor="let item of books">
+  <div>{{item.book.title}}</div>
+  <div class="description">{{item.book.description}}</div>
+  <div>{{item.book.authors.author.name}}</div>
+  <div>{{item.book.average_rating}}</div>
+  <div>{{item.date_added}}</div>
 </li>

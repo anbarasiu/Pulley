@@ -17,7 +17,7 @@ export class AppComponent {
 
   getBooks(): void {
     this.booksService.getBooks().subscribe(
-      books => this.books = books
+      books => this.books = books.GoodreadsResponse.reviews.review
     );
   }
 
