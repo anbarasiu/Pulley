@@ -7,13 +7,13 @@
 <h2>Track price drops for books you wish to read </h2>
 <ul class="books">
   <li>
-    <div (click)="onHeadingClick('title')">Title</div>
-    <div (click)="onHeadingClick('description')">Description</div>
-    <div (click)="onHeadingClick('author')">Author</div>
-    <div (click)="onHeadingClick('rating')">Rating</div>
+    <div (click)="onHeadingClick('book', 'title')">Title</div>
+    <div (click)="onHeadingClick('book', 'description')">Description</div>
+    <div (click)="onHeadingClick('book', 'author')">Author</div>
+    <div (click)="onHeadingClick('book', 'rating')">Rating</div>
     <div (click)="onHeadingClick('dateAdded')">Date Added</div>
   </li>
-  <book-list [books]="books">
+  <book-list [books]="reviews">
   </book-list>
   <app-messages></app-messages>
 </ul>

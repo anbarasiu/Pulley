@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { BooksService } from './books.service';
-import { Book } from './book';
+import { Book, Review } from './book';
 
 @Component({
   selector: 'app-root',
@@ -8,7 +8,7 @@ import { Book } from './book';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  books: Book[];
+  reviews: Review[];
   constructor(private booksService: BooksService){}
 
   ngOnInit() {
@@ -17,14 +17,14 @@ export class AppComponent {
 
   getBooks(): void {
     this.booksService.getBooks().subscribe(
-      books => this.books = books.GoodreadsResponse.reviews.review
+      reviews => this.reviews = reviews
     );
   }
 
-  onHeadingClick(heading: string): void {
-    this.books = this.books.sort((currentValue, nextValue) => {
-      const cur = currentValue[heading];
-      const next = nextValue[heading];
+  onHeadingClick(heading1: string, heading2: string): void {
+    this.reviews = this.reviews.sort((currentValue, nextValue) => {
+      const cur = heading2 ? currentValue[heading1] : currentValue[heading1][heading2];
+      const next = heading2 ? nextValue[heading1] : currentValue[heading1][heading2];
       if (cur < next) return -1;
       else if (cur > next) return 1;
       return 0;
