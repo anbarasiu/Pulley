@@ -7,11 +7,9 @@
 <h2>Track price drops for books you wish to read </h2>
 <ul class="books">
   <li>
-    <div (click)="onHeadingClick('book', 'title')">Title</div>
-    <div (click)="onHeadingClick('book', 'description')">Description</div>
-    <div (click)="onHeadingClick('book', 'author')">Author</div>
-    <div (click)="onHeadingClick('book', 'rating')">Rating</div>
-    <div (click)="onHeadingClick('dateAdded')">Date Added</div>
+    <div *ngFor="let heading of headings; let i=index" (click)="onHeadingClick($event, heading.key1, heading.key2, i)"> 
+      {{ heading.title }} {{ heading.isSorted ? "&darr;" : '' }}
+    </div>
   </li>
   <book-list [books]="reviews">
   </book-list>

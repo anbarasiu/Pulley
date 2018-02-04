@@ -25,3 +25,10 @@ export class Reviews {
     '@total': string;
     review: Review[]
 }
+
+export class Heading {
+    title: string;
+    isSorted: boolean;
+    key1: string;
+    key2?: string;
+}
